@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sens", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li a{
+  text-decoration: none;
+}
+
+div img {
+  display: block;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  max-width: 992px;
+  margin: auto;
+  width: 100%;
+  min-width: 320px;
+}
+
+header {
+  background-color: #122457;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  color:aliceblue;
+}
+
+header .list-items {
+  display: flex; 
+  width: 100%;
+  max-width: 260px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-items li a {
+  color:aliceblue;  
+}
+
+header .menu {
+  justify-content: space-between;
+}
+
+.presentation {
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.presentation .text-presentation {
+  min-height: 200px;
+}
+.text-presentation h1 {
+  color: #122457;
+  font-size: 40px;
+  margin-bottom: 10px;  
+}
+
+.btn {
+  background-color: #122457;
+  color: aliceblue;
+  text-align: center;
+  border-radius: 30px;
+  width: 220px;
+  display: block;
+  text-decoration: none;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#goal {
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#goal h2 {
+  font-size: 32px;
+  color: #122457;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#goal h2::before{
+  content: "";
+  height: 50px;
+  width: 5px;
+  margin-right: 5px;
+  background-color: #122457;
+  position: relative;
+}
+
+#goal p {
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+#goal img {
+  min-width: 420px;
+}
+
+.container-external {
+  background-color: #122457;
+  width: 100%;  
+}
+
+#service {
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+#service h2 {
+  color: aliceblue;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.list-service {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-service .items-service {
+  text-align: center;
+}
+
+.items-service a{
+  width: 220px;
+  background-color: aliceblue;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 50px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #122457;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.items-service p {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 20px;
+  color: aliceblue;
+}
+
+.items-service img {
+  width: 80%;
+  margin: auto;
+}
+
+#plans {
+  flex-direction: column;
+  margin-right: 100vh;
+  padding-top: 50px;
+}
+
+#plans h2 {
+  font-size: 32px;
+}
+
+.list-plans {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.items-plans {
+  flex: 1;
+  border: 2px solid #122457;
+  margin-right: 20px;
+  padding: 10px;
+  max-width: 240px;
+}
+
+.items-plans .btn {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.items-plans h3 {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.items-plans h3::after {
+  content: "";
+  background-color: #122457;
+  width: 100%;
+  height: 3px;
+  margin-top: 20px; 
+  margin-bottom: 10px;
+}
+
+.items-plans ul {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.items-plans ul li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.items-plans ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #122457;
+  margin-right: 5px;
+}
+
+footer {
+  background-color: #122457;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+footer .footer {
+  justify-content: space-between;
+  color: aliceblue;
+}
+
+/*mobile*/
+
+@media(max-width = 992px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .presentation {
+    flex-direction: column-reverse;
+  }
+
+  .presentation .text-presentation {
+    width: 100%;
+  }
+
+  #goal {
+    flex-direction: column-reverse;
+  }
+
+  #goal img {
+    min-width: 320px;
+  }
+
+  .list-service {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .items-service img {
+    width: 50%;
+    margin: auto;
+  }
+
+  .list-plans {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .list-plans .items-plans {
+    max-width: 90%;
+    margin: auto;
+    width: 100%;  
+    margin-bottom: 20px;  
+  }
+}
